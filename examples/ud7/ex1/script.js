@@ -22,7 +22,7 @@ function genera() {
     // Si ya existía un párrafo (hijo del div), sustituirlo por el creado. Si no, añadirlo como hijo del primer div:
     // la primera vez genera parrafo1 con el número aleatorio 1 dentro y lo añade al primer div: primero
     // el resto de las veces reemplaza el párrafo que existía parrafoAnterior1 por el nuevo generado que contendrá un nuevo número aleatorio 1
-    if (parrafoAnterior1 != null) {
+    if (parrafoAnterior1 !== null) {
         //var parrafoAnterior1 = primero.firstChild;
       primero.replaceChild(parrafo1, parrafoAnterior1);
     }
@@ -37,7 +37,7 @@ function genera() {
     // Si ya existía un párrafo (hijo del div), sustituirlo por el creado. Si no, añadirlo como hijo del segundo div:
     // la primera vez genera parrafo2 con el número aleatorio 2 dentro y lo añade al segundo div: segundo
     // el resto de las veces reemplaza el párrafo que existía parrafoAnterior2 por el nuevo generado que contendrá un nuevo número aleatorio 2
-    if(parrafoAnterior2 != null) {
+    if(parrafoAnterior2 !== null) {
       segundo.replaceChild(parrafo2, parrafoAnterior2);
     }
     else {
@@ -70,7 +70,7 @@ function genera() {
     // Obtenemos su hijo si ya existe,
     var parrafoAnterior = resultado.firstChild;
     // Si ya existía un párrafo de resultado anterior, sustituirlo. Si no, añadirlo
-    if(parrafoAnterior != null) {
+    if(parrafoAnterior !== null) {
         resultado.replaceChild(parrafoMayor, parrafoAnterior);
       // reemplaza parrafoAnterior por parrafoMayor
     }

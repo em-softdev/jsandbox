@@ -1,0 +1,1 @@
+Utiliza los eventos onmouseover y onmouseout para cambiar de imagen (cualquier imagen) según estemos situados sobre ella o no
