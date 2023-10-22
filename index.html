@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+	<title>JSandBox: Esperanza PIE JRojas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="utf-8" />
+	<meta name="description"
+		content="JSandBox es un entorno de ejecución de css y JavaScript para ayudar al alumno a comprender en pronfundidad los ejemplos de clase." />
+	<meta name="keywords" content="JSandBox, sandbox, css, stylesheet, js, JavaScript, test" />
+	<meta name="author" content="Javier Rojas" />
+	<meta name="copyright" content="Haz lo que quieras con este código" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
+	<!-- Más iconos https://fontawesome.com/search -->
+
+</head>
+
+<body>
+
+	<!-- CABECERA Y MENÚ -->
+
+	<!-- El header se oculta para el modo iframe  -->
+	<header>
+		<div id="info-panel">
+			<!-- Muestra los botones de iframe, descargar y run a la izquierda -->
+			<div class="float-left">
+
+
+			</div>
+
+			<!-- AQUÍ Muestra el título del ejercico a partir del archivo examples/menu.json y de las variables GET QueryString.ud y QueryString.ex -->
+
+		</div>
+	</header>
+
+
+	<div id="float-buttons">
+		<div id="run" class="float-button float-button-left-1 clickable" tabindex="1">
+			<p><i class="fa-sharp fa-solid fa-play"></i></p>
+		</div>
+
+		<div id="exercise" class="float-button float-button-left-2 clickable" tabindex="2">
+			<p><i class="fa-solid fa-graduation-cap"></i></p>
+		</div>
+
+		<div id="config" class="float-button float-button-left-3 clickable" tabindex="3">
+			<p><i class="fa fa-screwdriver-wrench"></i></p>
+		</div>
+
+		<div id="go-to-web" class="float-button float-button-rigth clickable" tabindex="7">
+			<p><i class="fa fa-external-link" aria-hidden="true"></i></p>
+		</div>
+	</div>
+
+
+
+	<div id="nav-container">
+		<!-- Botones #run y #go-to-web para el modo iframe  -->
+
+		<div id="menu-button" class="float-button float-button-left-4" tabindex="4">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</div>
+
+		<div id="nav-content">
+			<div class="float-right">
+				<div id="back" class="button clickable" tabindex="5">
+					<p><i class="fa fa-backward" aria-hidden="true"></i></p>
+				</div>
+				<div id="next" class="button clickable" tabindex="6">
+					<p><i class="fa fa-forward" aria-hidden="true"></i></p>
+				</div>
+			</div>
+
+			<div class="infoMenu">
+
+				<h4 class='destacar'>
+					<a tabindex="8" href="index.html?mode=css&ud=0&ex=1"><i class="fa-solid fa-list-check"></i>&nbsp;TUTORIAL</a>
+				</h4>
+
+				<br>
+
+				<ul id="menu">
+					<!-- Muestra el título y el enlace a todos los ejercicos a partir del archivo examples/menu.json -->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- CONTENEDOR PRINCIPAL -->
+	<div class="container">
+		<!-- CONTENEDOR CON EL CÓDIGO -->
+		<div class="grid">
+			<div id="switch-html" class="header-panel clickable">
+				<h4 style="color:#ff8c00"><i class="fa-brands fa-html5"></i> &nbsp;HTML</h4>
+			</div>
+			<div id="htmlPanel" class="panelCode panelM">
+				<div id="html" class="editor"></div>
+			</div>
+			<!-- ESPACIADOR PARA REDIMENSIONAR VERTICALMENTE (resizer.js)-->
+			<div class="resizer resizer-left" data-direction="vertical"></div>
+
+			<div id="switch-css" class="header-panel clickable">
+				<h4 style="color:#2196F3"><i class="fa-brands fa-css3-alt"></i> &nbsp;CSS</h4>
+			</div>
+			<div id="cssPanel" class="panelCode panelM">
+				<div id="css" class="editor"></div>
+			</div>
+
+			<!-- ESPACIADOR PARA REDIMENSIONAR VERTICALMENTE (resizer.js)-->
+			<div class="resizer resizer-left" data-direction="vertical"></div>
+
+			<div id="switch-js" class="header-panel clickable">
+				<h4 style="color:#daa520"><i class="fa-brands fa-js"></i> &nbsp;JS</h4>
+			</div>
+			<div id="jsPanel" class="panelCode panelM">
+				<div id="js" class="editor"></div>
+			</div>
+
+			<!-- ESPACIADOR PARA REDIMENSIONAR VERTICALMENTE (resizer.js)-->
+			<div class="resizer" data-direction="vertical"></div>
+
+		</div>
+
+
+		<!-- ESPACIADOR PARA REDIMENSIONAR HORIZONTALEMTEN (resizer.js)-->
+		<div class="resizer" data-direction="horizontal"></div>
+
+
+		<!-- CONTENEDOR CON EL RESULTADO -->
+		<div class="grid">
+
+			<div id="switch-text" class="header-panel clickable">
+				<h4 style="color:#7FB685"><i class="fa fa-book" aria-hidden="true"></i> &nbsp;DOCUMENTACIÓN</h4>
+			</div>
+
+			<div id="textPanel" class="panelOut panelM">
+				<div id="text" class="editor"> </div>
+			</div>
+
+			<!-- ESPACIADOR PARA REDIMENSIONAR VERTICALMENTE (resizer.js)-->
+			<div class="resizer resizer-right" data-direction="vertical"></div>
+
+			<div id="switch-out" class="header-panel clickable">
+				<h4 style="color: #df5e50"> <i class="fa fa-desktop" aria-hidden="true"></i> &nbsp;PANTALLA</h4>
+			</div>
+			<div id="outputPanel" class="panelOut panelM">
+				<iframe id="outputHTML"></iframe>
+			</div>
+
+			<!-- ESPACIADOR PARA REDIMENSIONAR VERTICALMENTE (resizer.js)-->
+			<div class="resizer resizer-right" data-direction="vertical"></div>
+
+
+			<div id="switch-dev" class="header-panel clickable">
+				<h4 style="color:#8360c3"><i class="fa fa-terminal" aria-hidden="true"></i> &nbsp;CONSOLA</h4>
+			</div>
+			<div id="devPanel" class="panelOut panelM">
+				<div id="dev" class="editor"></div>
+			</div>
+
+			<!-- ESPACIADOR PARA REDIMENSIONAR VERTICALMENTE (resizer.js)-->
+			<div class="resizer" data-direction="vertical"></div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+	<div id="modal_container" class="modal-container">
+		<div class="modal-close">
+			<div class="modal">
+				<div class="config-container">
+
+					<div class="container-row">
+
+						<div id="close" class="button clickable" tabindex="10001">
+							<p><i class="fa fa-times" aria-hidden="true"></i></p>
+						</div>
+						<h3> OPCIONES </h3>
+					</div>
+
+					<div class="container-row">
+						<div id="reset" class="button clickable" tabindex="10002">
+							<p><i class="fa fa-eraser"></i></p>
+						</div>
+						<p> Reiniciar el ejericicio </p>
+					</div>
+
+					<div class="container-row">
+						<div id="download" class="button clickable" tabindex="10003"
+							onclick="descarga_ejercicio(); return false;">
+							<p><i class="fa fa-cloud-download" aria-hidden="true"></i></p>
+						</div>
+						<p> Descarga el ejercicio </p>
+					</div>
+
+					<div class="container-row">
+						<div id="print" class="button clickable" tabindex="10004"
+							onclick="imprime_ejercicio(); return false;">
+							<p><i class="fa fa-print" aria-hidden="true"></i></p>
+						</div>
+						<p> Imprimir el ejercicio </p>
+					</div>
+
+					<div class="container-row">
+						<div id="runload" class="button clickable" tabindex="10005">
+							<p><i class="fa fa-cog" aria-hidden="true"></i></p>
+						</div>
+						<p id="text-runload"> Activa / desactiva ejecutar el código al cargar la página </p>
+					</div>
+
+					<div class="container-row">
+						<div id="liveserver" class="button clickable" tabindex="10006">
+							<p><i class="fa fa-bolt"></i></p>
+						</div>
+						<p id="text-liveserver"> Activa / desactiva Live Server </p>
+					</div>
+
+					<div class="container-row">
+						<div id="test" class="button clickable" tabindex="10007">
+							<p><i class="fa-solid fa-graduation-cap"></i></p>
+						</div>
+						<p id="text-test"> Activa / desactiva Modo ejericicio </p>
+					</div>
+
+					<div class="container-row">
+						<div id="dark" class="button clickable" tabindex="10008">
+							<p><i class="fa-regular fa-moon"></i></p>
+						</div>
+						<p id="text-dark"> Activa / desactiva Modo oscuro </p>
+					</div>
+
+					<div class="container-row">
+						<div id="colorblind" class="button clickable" ttabindex="10009">
+							<p><i class="fa-solid fa-circle-half-stroke"></i></p>
+						</div>
+						<p id="text-colorblind"> Activa / desactiva Modo alto contraste </p>
+					</div>
+
+					<div class="container-row">
+						<div id="view" class="button clickable" tabindex="10010">
+							<p><i class="fa-solid fa-table-columns"></i></p>
+						</div>
+						<p id="text-view"> Activa / desactiva Vista vertical </p>
+					</div>
+
+					<div class="container-row">
+						<div id="iframe" class="button clickable" tabindex="10011">
+							<p><i class="fa fa-code" aria-hidden="true"></i></p>
+						</div>
+						<p id="text-copy-iframe"> Clic en el botón para copiar el código html para incrustar el
+							iframe
+						</p>
+						<div class="container-row">
+							<div id="iframecode"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="exercise-container">
+
+					<div class="container-row">
+
+						<div id="closeExercise" class="button clickable" tabindex="10011">
+							<p><i class="fa fa-times" aria-hidden="true"></i></p>
+						</div>
+						<h3> EJERCICIO </h3>
+					</div>
+
+					<div class="container-row">
+
+							<div id="exercisePanel"  tabindex="10012"> </div>
+					
+
+					</div>
+					<div class="container-row">
+						<div id="outputPanel" class="panelExercise"  tabindex="10013">
+							<iframe id="outputHTML"></iframe>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+	</div>
+
+	<!-- SCRIPTS -->
+	<script src="js/tools/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+	<script src="js/tools/ace/ace.js"></script> <!-- Ace Editor -->
+	<script src="js/tools/ace/mode-less.js"></script> <!-- Ace Editor -->
+	<script src="js/tools/querystring.js"></script> <!-- Utilidad para recoger los parámetros GET -->
+	<script src="js/tools/resizer.js"></script> <!-- Utilidad para redimensionar los paneles -->
+	<script src="js/tools/descargar.js"></script> <!-- Utilidad para descargar los ejemplos -->
+	<script src="js/tools/filesaver.js"></script> <!-- Utilidad para guardar ficheros de los ejemplos -->
+	<script src="js/tools/jszip.min.js"></script> <!-- Utilidad para comprimir ficheros de los ejemplos -->
+	<script src="js/tools/imprimir.js"></script> <!-- Utilidad para imprimir los ejemplos -->
+	<script src="js/tools/console.js"></script>
+	<!-- Utilidad para capturar los mensajes de consola y mostrarlos también en el div id="dev" -->
+	<script src="js/app.js"></script> <!-- Main -->
+
+</body>
+
+</html>

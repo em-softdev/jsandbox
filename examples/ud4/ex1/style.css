@@ -1,0 +1,97 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background-image: url(./examples/ud4/ex1/img/img.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.trigger {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background: black;
+}
+
+.trigger:hover {
+  background: #1b1b1b;
+}
+
+.trigger:hover .onda1 {
+  -webkit-animation: expandir 2s ease-in-out;
+          animation: expandir 2s ease-in-out;
+}
+
+.trigger:hover .onda2 {
+  -webkit-animation: expandir 2.2s ease-in-out;
+          animation: expandir 2.2s ease-in-out;
+}
+
+.trigger:hover .onda3 {
+  -webkit-animation: expandir 2.5s ease-in-out;
+          animation: expandir 2.5s ease-in-out;
+}
+
+.onda {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 5px 20px #005661;
+          box-shadow: 3px 3px 5px 20px #005661;
+  -webkit-box-shadow: inset 0 0 20px #000000;
+          box-shadow: inset 0 0 20px #000000;
+  opacity: 0;
+}
+
+@-webkit-keyframes expandir {
+  0% {
+    opacity: 1;
+    -webkit-box-shadow: inset 0 0 20px #0000002a;
+            box-shadow: inset 0 0 20px #0000002a;
+  }
+  100% {
+    -webkit-transform: scale(15);
+            transform: scale(15);
+    opacity: 0;
+  }
+}
+
+@keyframes expandir {
+  0% {
+    opacity: 1;
+    -webkit-box-shadow: inset 0 0 20px #0000002a;
+            box-shadow: inset 0 0 20px #0000002a;
+  }
+  100% {
+    -webkit-transform: scale(15);
+            transform: scale(15);
+    opacity: 0;
+  }
+}

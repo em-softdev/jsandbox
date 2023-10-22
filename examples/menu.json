@@ -1,0 +1,102 @@
+{
+  "menu": {
+    "ud": [
+      {
+        "numero": "1",
+        "titulo": "Introducción a JavaScript",
+        "ejemplos": {
+          "ej": [
+            {
+              "numero": "1",
+              "info": "Repaso de CSS: Test inicial"
+            }
+          ]
+        }
+      },
+      {
+        "numero": "2",
+        "titulo": "Características del lenguaje JS",
+        "ejemplos": {
+          "ej": [
+            {
+              "numero": "1",
+              "info": "Menú desplegable sencillo"
+            }
+          ]
+        }
+      },
+      {
+        "numero": "3",
+        "titulo": "Objetos predefinidos en JS",
+        "ejemplos": {
+          "ej": [
+            {
+              "numero": "1",
+              "info": "Ejemplos"
+            }
+          ]
+        }
+      },
+      {
+        "numero": "4",
+        "titulo": "Programación con estructuras definidas por el usuario",
+        "ejemplos": {
+          "ej": [
+            {
+              "numero": "1",
+              "info": "Animación gota de agua"
+            }
+          ]
+        }
+      },
+      {
+        "numero": "5",
+        "titulo": "Eventos en JS",
+        "ejemplos": {
+          "ej": [
+            {
+              "numero": "1",
+              "info": "Parallax sencillo de comida "
+            }
+          ]
+        }
+      },
+      {
+        "numero": "6",
+        "titulo": "Formularios en JS",
+        "ejemplos": {
+          "ej": [
+            {
+              "numero": "1",
+              "info": "Tetraedro"
+            }
+          ]
+        }
+      },
+      {
+        "numero": "7",
+        "titulo": "DOM (Model Object Document)",
+        "ejemplos": {
+          "ej": [
+            {
+              "numero": "1",
+              "info": "Número mayor entre dos aleatorios"
+            }
+          ]
+        }
+      },
+      {
+        "numero": "8",
+        "titulo": "Mecanismos de comunicación asíncrona AJAX",
+        "ejemplos": {
+          "ej": [
+            {
+              "numero": "1",
+              "info": "Ejercicio Halloween "
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

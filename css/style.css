@@ -1,0 +1,492 @@
+/* //////////////////////////////////////////////////////////////////////
+      Variables para los estilos: clear | dark | colorblind
+//////////////////////////////////////////////////////////////////////*/
+:root {
+  --color-fondo-dark: #202020;
+  --color-fondo-gradienete-dark: linear-gradient(90deg, #8360c3, #2ebf91, #8360c3);
+
+
+  --color-text-dark: aliceblue;
+
+  --color-button-enalble: #8360c3;
+  --color-button-disalble: #ccc;
+
+  --color-clickable-dark: #7b64a6b1;
+
+}
+
+/* //////////////////////////////////////////////////////////////////////
+                        Body
+//////////////////////////////////////////////////////////////////////*/
+@font-face {
+  font-family: interface;
+  src: url(../assets/fonts/Roboto-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+  background: var(--color-fondo-gradienete-dark);
+  min-width: 600px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: interface;
+  color: var(--color-text-dark);
+}
+
+p {
+  height: auto;
+} 
+
+a.actual {
+  color: var(--color-button-enalble);
+  font-weight: bold;
+
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////
+        Botones:
+//////////////////////////////////////////////////////////////////////*/
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+  pointer-events: auto;
+  margin-left: 15px;
+  touch-action: manipulation;
+  text-align: center;
+  float: left;
+  background-color: #8360c3;
+  width: 50px;
+  height: 30px;
+}
+
+.clickable:hover {
+  background-color: var(--color-clickable-dark);
+}
+
+.button-disable {
+  background-color: #ccc;
+}
+
+/* //////////////////////////////////////////////////////////////////////
+        Botones flotantes:   #run, #go-to-web y #menu-button
+//////////////////////////////////////////////////////////////////////*/
+
+#go-to-web {
+  position: absolute;
+
+  top: 10px;
+  margin-bottom: 0;
+
+
+
+  border: 2px;
+  border-radius: 2px;
+  border-style: solid;
+  border-image: linear-gradient(45deg, #8360c3, #2ebf91) 1;
+
+  background-color: transparent;
+
+
+}
+
+#go-to-web:hover {
+  background-color: #7b64a6b1;
+}
+
+.float-button {
+  width: 46px;
+  height: 26px;
+
+  position: absolute;
+  top: 10px;
+  align-items: center;
+  z-index: 900;
+
+  border: 2px;
+  border-radius: 2px;
+  border-style: solid;
+  border-image: linear-gradient(45deg, #8360c3, #2ebf91) 1;
+
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  cursor: pointer;
+  pointer-events: auto;
+  margin-left: 15px;
+  touch-action: manipulation;
+  text-align: center;
+  float: left;
+  overflow: hidden;
+
+}
+
+.float-button-rigth {
+  right: 15px;
+}
+
+.float-button-left-1 {
+  left: 0px;
+}
+
+.float-button-left-2 {
+  left: 65px;
+}
+
+.float-button-left-3 {
+  left: 130px;
+}
+
+.float-button-left-4 {
+  left: 195px;
+}
+
+#menu-button {
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.icon-bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  border-radius: 2px;
+  background: aliceblue;
+  transition: .3s;
+}
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////
+                        Menú y cabecera
+//////////////////////////////////////////////////////////////////////*/
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background: #212121;
+}
+
+#info-panel {
+  width: 100%;
+  margin-left: 275px;
+  padding-top: 10px;
+}
+
+.float-left {
+  float: left;
+  padding-right: 15px;
+
+}
+
+.float-right {
+  float: right;
+  padding-right: 65px;  
+}
+
+#nav-container {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#nav-container * {
+  visibility: visible;
+}
+
+.icon-bar+.icon-bar {
+  margin-top: 5px;
+}
+
+#nav-container:focus-within #menu-button {
+  pointer-events: none;
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(1) {
+  transform: translate3d(0, 7px, 0) rotate(45deg);
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(3) {
+  transform: translate3d(0, -7px, 0) rotate(-45deg);
+}
+
+#nav-content {
+  margin-top: 50px;
+  padding: 20px;
+  width: 100%;
+  max-width: 45%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 110px);
+  background: var(--color-fondo-dark);
+  pointer-events: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform: translateX(-100%);
+  transition: transform .3s;
+  will-change: transform;
+  contain: paint;
+  overflow-y: scroll;
+}
+
+.infoMenu {
+  width: 100%;
+}
+
+#nav-content ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-content li a {
+  padding: 2px 10px;
+  display: block;
+  text-decoration: none;
+}
+
+#nav-content h4 a {
+  padding: 2px 10px;
+  display: block;
+  text-decoration: none;
+}
+
+#nav-content li:hover {
+  color: #8360c3;
+}
+
+#nav-content li:not(.small)+.small {
+  margin-top: auto;
+}
+
+#nav-container:focus-within #nav-content {
+  transform: none;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////
+                        CUERPO DE LA PÁGINA
+//////////////////////////////////////////////////////////////////////*/
+
+.container {
+  width: 100%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  background: var(--color-fondo-dark);
+  margin-top: 52px;
+}
+
+.resizer[data-direction='horizontal'] {
+  background-color: #2ebf91;
+  cursor: ew-resize;
+  float: left;
+  height: 10000px;
+  width: 2px;
+}
+
+.resizer[data-direction='vertical'] {
+  cursor: ns-resize;
+  height: 2px;
+  width: 100%;
+}
+
+
+.resizer-left {
+  background: linear-gradient(45deg, #8360c3, #2ebf91);
+}
+
+.resizer-right {
+  background: linear-gradient(45deg, #2ebf91, #8360c3);
+}
+
+.grid {
+  width: calc((100% - 2px) / 2);
+  /*le quitamos 2px, la anchura del resizer*/
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.header-panel {
+  height: 20px;
+  cursor: pointer;
+  pointer-events: auto;
+  padding-left: 15px;
+  touch-action: manipulation;
+  background-color: #212121;
+}
+
+.panelL {
+  height: calc((100% - 72px) - 46px);
+}
+
+.panelM {
+  height: calc(((100% - 24px) / 2) - 47px);
+}
+
+.panelS {
+  height: calc(((100%) / 3) - 39.2px);
+}
+
+.panel0 {
+  height: 0px;
+}
+
+
+
+.editor {
+  position: relative;
+  height: 100%;
+}
+
+.ace_scrollbar::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+.ace_scrollbar::-webkit-scrollbar-track
+{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #202020; /* Matches ace monokai */
+}
+
+.ace_scrollbar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+
+
+#outputPanel {
+  background: #ffffff;
+}
+
+#outputHTML {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+}
+
+.row {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  overflow: hidden;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////
+                        MODAL
+//////////////////////////////////////////////////////////////////////*/
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  z-index: -999;
+}
+
+.modal-close {
+  height: 100%;
+  width: 100%;
+  padding: 10% 10%;
+}
+
+.modal {
+  background-color: var(--color-fondo-dark);
+  height: 90%;
+  margin-top: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.config-container {
+  width: 100%;
+}
+
+.exercise-container {
+  width: 100%;
+}
+
+.container-row {
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 100%;
+  height: fit-content;
+  float: left;
+  align-content: center;
+
+}
+
+.container-row>p, h1, h2, h3 {
+  margin: 5px 75px;
+}
+
+#iframecode, #exercisePanel {
+  width: 90%;
+  height: 100px;
+}
+
+#exercisePanel {
+  width: 95%;
+  height: 200px;
+
+}
+
+.panelExercise{
+  width: 95%;
+  height: 500px;
+
+}

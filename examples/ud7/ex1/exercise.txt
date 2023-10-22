@@ -1,0 +1,1 @@
+Utilizando los nodos DOM, Se pide crear un script que genere dos números aleatorios al pulsar un botón y los inserte en un div cada uno. Pulsando el botón comparar obtendrá el mayor de ellos y devolveremos el resultado insertando el número en un tercer div y borrándolo del original.
