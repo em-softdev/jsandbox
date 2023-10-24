@@ -8,7 +8,11 @@
           "ej": [
             {
               "numero": "1",
-              "info": "Repaso de CSS: Test inicial"
+              "info": "Inicio: Hola Mundo"
+            },
+            {
+              "numero": "2",
+              "info": "Mostrar datos"
             }
           ]
         }
@@ -20,7 +24,19 @@
           "ej": [
             {
               "numero": "1",
-              "info": "Menú desplegable sencillo"
+              "info": "Media de pares, impares y todos"
+            },
+            {
+              "numero": "2",
+              "info": "Pasar de decimal a binario"
+            },
+            {
+              "numero": "3",
+              "info": "Pasar de decimal a hexadecimal"
+            },
+            {
+              "numero": "4",
+              "info": "Pirámide de un número"
             }
           ]
         }
@@ -32,7 +48,19 @@
           "ej": [
             {
               "numero": "1",
-              "info": "Ejemplos"
+              "info": "Date: Fecha en 100 días"
+            },
+            {
+              "numero": "2",
+              "info": "String: Extraer cadena de una frase"
+            },
+            {
+              "numero": "3",
+              "info": "Window: Cambiar color de fondo cada 5seg"
+            },
+            {
+              "numero": "4",
+              "info": "Document: Galería básica de imágenes"
             }
           ]
         }

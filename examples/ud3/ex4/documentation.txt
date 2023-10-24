@@ -1,0 +1,1 @@
+Crea una galería de imágenes básica que muestre 3 imágenes. Seleccionaremos la imagen que queremos ver (<select>) y mediante el evento onchange la mostraremos. (document.images)

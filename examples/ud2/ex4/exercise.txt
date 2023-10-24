@@ -1,0 +1,1 @@
+Crear un programa que dibuje una pirámide con los números, desde el número 0 hasta el número elegido.

@@ -1,0 +1,1 @@
+A partir de un número decimal obtener el equivalente en hexadecimal.

@@ -1,0 +1,1 @@
+Realiza un script que cambie el color de fondo del documento repetidamente cada segundo. Al cabo de 5 segundos, se ejecuta la función clearInterval() que detiene el proceso iniciado por setInterval().

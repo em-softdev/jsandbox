@@ -1,0 +1,2 @@
+Extraer de la variable frase la subcadena que contenga los caracteres que se corresponden con los que van del 4 al 8.
+frase="El sabio no dice lo que sabe, y el necio no sabe lo que dice.";
