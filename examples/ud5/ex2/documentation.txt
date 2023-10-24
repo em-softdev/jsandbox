@@ -1,1 +1,1 @@
-Utiliza los eventos onmouseover y onmouseout para cambiar de imagen (cualquier imagen) según estemos situados sobre ella o no
+Utiliza el evento adecuado para mostrar un aviso de que «se ha soltado la tecla que has pulsado» para cualquier tecla del teclado.

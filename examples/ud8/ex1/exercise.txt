@@ -1,0 +1,1 @@
+Realiza una petición al servidor para comprobar la disponibilidad del login escogido por el usuario.

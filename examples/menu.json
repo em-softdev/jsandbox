@@ -72,7 +72,7 @@
           "ej": [
             {
               "numero": "1",
-              "info": "Animación gota de agua"
+              "info": "Array: método filter"
             }
           ]
         }
@@ -85,6 +85,14 @@
             {
               "numero": "1",
               "info": "Eventos de ratón"
+            },
+            {
+              "numero": "2",
+              "info": "Eventos de teclado"
+            },
+            {
+              "numero": "3",
+              "info": "Eventos html"
             }
           ]
         }
@@ -96,7 +104,11 @@
           "ej": [
             {
               "numero": "1",
-              "info": "Tetraedro"
+              "info": "Formulario sencillo de selección"
+            },
+            {
+              "numero": "2",
+              "info": "Formulario de datos personales"
             }
           ]
         }
@@ -109,6 +121,10 @@
             {
               "numero": "1",
               "info": "Número mayor entre dos aleatorios"
+            },
+            {
+              "numero": "2",
+              "info": "Paleta de dibujo - Paint"
             }
           ]
         }
@@ -120,7 +136,7 @@
           "ej": [
             {
               "numero": "1",
-              "info": "Ejercicio Halloween "
+              "info": "Comprobar la disponibilidad de login"
             }
           ]
         }

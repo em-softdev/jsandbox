@@ -1,0 +1,1 @@
+Utiliza una lista desplegable para que el usuario elija una provincia de entre cuatro y muestra mediante un mensaje de aviso la opción seleccionada.

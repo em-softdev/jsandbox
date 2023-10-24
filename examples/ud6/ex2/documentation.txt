@@ -1,0 +1,1 @@
+Realiza un formulario para recoger todos los datos del usuario y a continuación muestre los valores introducidos.

@@ -1,0 +1,16 @@
+<h1>Trabajando con formularios</h1>
+<form action="" method="post" enctype="multipart/form-data" />
+  <fieldset><legend>Formulario</legend> 
+	 Nombre:<input type="text" name= "nombre" id="nombre" value="" size="42" maxlength="30"/><br>
+	 Apellidos:<input type="text" name="ape" id="ape" value="" size="40" maxlength="80"/><br> 
+	 DNI:<input type="text" name="dni" value="" size="10" maxlength="9" /><br>
+	 Sexo:
+	 <br><input type="radio" name="sexo" value="hombre" checked="checked"/>Hombre   
+	 <br><input type="radio" name="sexo" value="mujer" />Mujer 
+	 <br>Incluir mi foto: <input type="file" name="foto" /> <br/>
+	 <input name="publ" type="checkbox" value="publicidad" checked="checked"/>   
+	 Enviar publicidad 
+	 <br><input type="button" name="ver_datos" value="Mostrar datos" onclick="mostrar()"/>
+	 <input type="reset" name="limpiar" value="Borrar los datos introducidos"/>
+  </fieldset>
+</form>

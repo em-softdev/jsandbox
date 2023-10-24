@@ -1,8 +1,8 @@
-imagen1=new Image;
-imagen1.src="ojo.jpg";
-imagen2=new Image;
-imagen2.src="ojo2.jpg";
-var i=1;
+let imagen1=new Image;
+imagen1.src="img/ojo.jpg";
+let imagen2=new Image;
+imagen2.src="img/ojo2.jpg";
+let i=1;
 function cambio_icono() {                       
    if (i == 1)
       {

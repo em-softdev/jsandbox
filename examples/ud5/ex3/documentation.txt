@@ -1,0 +1,1 @@
+Utiliza el evento change (manejador onchange) para indicar mediante un mensaje de aviso que ha cambiado el contenido de cada uno de los inputs.
